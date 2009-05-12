@@ -1,0 +1,35 @@
+<% content_for :header_tags do -%>   
+	<%= javascript_include_tag "jquery", :plugin => "redmine_issue_summary" %>            
+
+	<%= stylesheet_link_tag 'issue_summary',  :plugin => 'redmine_issue_summary' %>  
+  	<link rel="stylesheet" href="http://dev.jquery.com/view/trunk/plugins/autocomplete/jquery.autocomplete.css" type="text/css" />
+  	<script type="text/javascript" src="http://dev.jquery.com/view/trunk/plugins/autocomplete/lib/jquery.bgiframe.min.js"></script>
+  	<script type="text/javascript" src="http://dev.jquery.com/view/trunk/plugins/autocomplete/lib/jquery.dimensions.js"></script>
+  	<script type="text/javascript" src="http://dev.jquery.com/view/trunk/plugins/autocomplete/jquery.autocomplete.js"></script>  
+  	<script type="text/javascript">  
+     	$(document).ready(function(){
+    		$("#recipients").autocomplete("/ez_contacts", {
+    			multiple: true
+    		});
+    	});            
+	</script>    
+<% end -%>
+
+<% form_tag ez_email_path, :method => :post do -%>
+	<div class="label_wrapper">
+		<%= label_tag 'recipients', 'recipients:' %>
+		<%= text_area_tag 'recipients' %>
+	</div>
+	<div class="label_wrapper">
+		<%= label_tag 'CC', 'CC:' %>
+		<%= text_area_tag 'CC' %>
+	</div>
+	<div class="label_wrapper">
+		<%= label_tag 'subject:'%>
+		<%= text_field_tag 'subject', @issue.subject %>
+	</div>
+	<textarea name="content" id="issue_content" cols="40" rows="10" ><%= h(render :partial => "content", :object => @issue) %></textarea>    <br />
+	<%= submit_tag 'Send Mail' %>
+<% end -%>                   
+        
+<div id="result"></div>

@@ -1,0 +1,53 @@
+label {
+	font-weight: bold;
+	text-align: right;
+	float: left;
+	width: 6%;
+	clear: left;
+}
+.label_wrapper input,  textarea {
+	width: 80% ;
+	border: 1px solid black;        
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+#issue_content{
+	width: 86%;
+}
+.label_wrapper input{
+	line-height: 2em;
+}
+
+.label_wrapper{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}             
+div.autocomplete {
+  margin:0px;  
+  padding:0px;  
+  width:250px;
+  background:#fff;
+  border:1px solid #888;
+  position:absolute;
+}
+
+div.autocomplete ul {
+  margin:0px;
+  padding:0px;
+  list-style-type:none;
+}
+
+div.autocomplete ul li.selected { 
+  background-color:#ffb;
+}
+
+div.autocomplete ul li {
+  margin:0;
+  padding:2px;
+  height:32px;
+  display:block;
+  list-style-type:none;
+  cursor:pointer;
+}
