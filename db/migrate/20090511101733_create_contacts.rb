@@ -8,6 +8,6 @@ class CreateContacts < ActiveRecord::Migration
 
 
   def self.down
-    drop_table :contacts
+    drop_table :ez_contacts
   end
 end
