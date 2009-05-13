@@ -1,0 +1,17 @@
+<fieldset id="email">
+	<legend><%= t("ez.email") %></legend>
+<% form_tag ez_email_path, :method => :post do -%>
+	<div class="label_wrapper">
+		<%= label_tag 'recipients', "#{t('ez.recipients')}:" %>
+		<%= text_area_tag 'recipients' %>
+	</div>
+	<div class="label_wrapper">
+		<%= label_tag "#{t('ez.subject')}:"%>
+		<%= text_field_tag 'subject', issue.subject %>
+	</div>
+	<%= hidden_field_tag 'issue_id', issue.id %>
+	<%= hidden_field_tag 'save_flag', 0 %>
+	<textarea name="content" id="issue_content" cols="40" rows="10" ></textarea><br />
+	<%= submit_tag t("ez.send_mail") %> <%= submit_tag t("ez.send_and_save_mail"), :id => "send_and_save" %>
+<% end -%>  
+</fieldset>

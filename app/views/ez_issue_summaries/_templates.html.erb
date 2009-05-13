@@ -1,0 +1,6 @@
+<fieldset id="mail_templates">
+	<legend><%= t("ez.email_template") %></legend>
+<%= select_tag "templates", options_from_collection_for_select(templates, :content, :content), :size => 6 %>
+<br />
+<input type="button" name="fill_in" value="<%= t('ez.fill_in')%>" id="fill_in" /> 
+</fieldset>

@@ -1,7 +1,7 @@
 class RedmineIssueSummaryListener < Redmine::Hook::ViewListener
 	render_on :view_layouts_base_html_head, :inline => <<-END
 		<% if controller.controller_name == "issues" && controller.action_name == "show" %>
-			<%= javascript_include_tag 'jquery', 'issue_summary', :plugin => 'redmine_issue_summary' %>
+			<%= javascript_include_tag 'jquery', 'issue_summary', :plugin => 'redmine_ez_summary' %>
 		<% end %>
 	END
 	

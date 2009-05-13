@@ -7,7 +7,6 @@ label {
 }
 .label_wrapper input,  textarea {
 	width: 80% ;
-	border: 1px solid black;        
 	padding-left: 0px;
 	padding-right: 0px;
 	margin-left: 0px;
@@ -50,4 +49,10 @@ div.autocomplete ul li {
   display:block;
   list-style-type:none;
   cursor:pointer;
+}      
+#mail_templates{
+	margin-top: 10px;
+}
+#templates{
+	width: 20em;
 }
