@@ -1,2 +1,11 @@
 en:
-  email: Email
+  ez:
+    email: Email
+    send_mail: Send Mail
+    send_and_save_mail: Send and Save
+    issue_mail_succ: Successfully delivered
+    issue_mail_error: Errors occured during deliverring
+    email_template: Email templates
+    fill_in: Fill in
+    recipients: Recipients
+    subject: Subject
