@@ -7,7 +7,7 @@ class RedmineIssueSummaryListener < Redmine::Hook::ViewListener
 	
   render_on :view_issues_show_details_bottom, :inline => <<-END
 		<div id="email_issue_menu" style="display:none;" class="icon" >                     
-			<%= link_to l(:email), ez_issue_summary_path(issue),:target => "_blank" %>
+			<%= link_to t("ez.email"), ez_issue_summary_path(issue),:target => "_blank" %>
 		</div>                                                           
 	END
 end
