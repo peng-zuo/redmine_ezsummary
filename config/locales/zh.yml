@@ -1,11 +1,11 @@
 zh:
-  ez:
-    email: 邮件
-    send_mail: 发送邮件
-    send_and_save_mail: 发送并保存
-    issue_mail_succ: 成功发送
-    issue_mail_error: 发送失败
-    email_template: 邮件模板
-    fill_in: 插入
-    recipients: 收件人
-    subject: 主题
+    ez_email: 邮件
+    ez_send_mail: 发送邮件
+    ez_send_and_save_mail: 发送并保存
+    ez_issue_mail_succ: 成功发送
+    ez_issue_mail_error: 发送失败
+    ez_email_template: 邮件模板
+    ez_fill_in: 插入
+    ez_recipients: 收件人
+    ez_subject: 主题
+    permission_ez_send_mail: 发送邮件

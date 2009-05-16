@@ -1,11 +1,11 @@
 en:
-  ez:
-    email: Email
-    send_mail: Send Mail
-    send_and_save_mail: Send and Save
-    issue_mail_succ: Successfully delivered
-    issue_mail_error: Errors occured during deliverring
-    email_template: Email templates
-    fill_in: Fill in
-    recipients: Recipients
-    subject: Subject
+    ez_email: Email
+    ez_send_mail: Send Mail
+    ez_send_and_save_mail: Send and Save
+    ez_issue_mail_succ: Successfully delivered
+    ez_issue_mail_error: Errors occured during deliverring
+    ez_email_template: Email templates
+    ez_fill_in: Fill in
+    ez_recipients: Recipients
+    ez_subject: Subject
+    permission_ez_send_mail: Send Mail
