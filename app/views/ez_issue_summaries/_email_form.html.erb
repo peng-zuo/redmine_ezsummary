@@ -9,7 +9,7 @@
       </div>
       <div class="label_wrapper">
         <%= label_tag "#{t('ez_subject')}:" %>
-        <%= text_field_tag 'subject', attributes[:subject] || issue.subject %>
+        <%= text_field_tag 'subject', attributes[:subject] || "#{issue.tracker.name} ##{issue.id}: #{issue.subject}" %>
       </div>
       <%= hidden_field_tag 'save_flag', 0 %>
       <textarea name="content" id="issue_content" cols="40" rows="10"><%= attributes[:content] %></textarea><br/>
