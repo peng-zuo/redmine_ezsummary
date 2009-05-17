@@ -1,0 +1,33 @@
+<% content_for :header_tags do -%>
+    <%= stylesheet_link_tag 'ez_mail', 'jquery.autocomplete.css', :plugin => 'redmine_ez_summary' %>
+    <%= javascript_include_tag "jquery",
+            "jquery.autocomplete.js",
+            "jquery.bgiframe.min.js",
+            :plugin => "redmine_ez_summary" %>
+
+
+    <script type="text/javascript">
+        $(function() {
+            //            $("#create_email_form").ajaxForm({
+            //                dataType: 'script'
+            //            });
+            $("#recipients").autocomplete("/ez_contacts", {
+                multiple: true
+            });
+            $("#send_and_save").click(
+                    function() {
+                        $("#save_flag").attr("value", 1);
+                    });
+            $("#fill_in").click(
+                    function() {
+                        $("#issue_content").append($("#templates option:selected").val());
+                    }
+                    );
+
+        });
+    </script>
+<% end -%>
+
+<%= render :partial => "email_form", :locals => { :issue => @issue, :attributes => @attributes, :errors => @errors } %>
+
+<%= render :partial => "templates", :object => @templates %>

@@ -55,4 +55,5 @@ div.autocomplete ul li {
 }
 #templates{
 	width: 20em;
-}  
+}
+.icon-mail { background-image: url('../images/mail.png'); }

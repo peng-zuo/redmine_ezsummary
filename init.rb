@@ -12,11 +12,11 @@ Redmine::Plugin.register :redmine_ez_summary do
   version '0.0.1'
 
   project_module :issue_tracking do
-    permission :ez_send_mail, :ez_issue_summaries =>  [:show, :email]
+    permission :ez_send_mail, :ez_issue_summaries =>  [:new, :create]
   end
   
 end
 Dispatcher.to_prepare do                        
 	User.send(:include, PengZuo::UserPatch)
 end
-ActionMailer::Base.__send__ :include, PengZuo::ActionMailerPatch
+#ActionMailer::Base.__send__ :include, PengZuo::ActionMailerPatch

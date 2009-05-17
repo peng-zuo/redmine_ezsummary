@@ -9,3 +9,6 @@ zh:
     ez_recipients: 收件人
     ez_subject: 主题
     permission_ez_send_mail: 发送邮件
+    ez_recipients_error: 发件人出错
+    ez_subject_error: 邮件主题出错
+    ez_content_error: 邮件内容出错

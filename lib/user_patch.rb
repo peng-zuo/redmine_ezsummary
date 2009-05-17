@@ -8,7 +8,7 @@ module PengZuo
 			base.send(:include, InstanceMethods) 
 
 			base.class_eval do 
-				has_many :ez_mail_templates, :dependent => :delete_all
+				has_many :ez_mail_templates, :order => "created_at desc", :dependent => :delete_all
 			end
 		end        
 		

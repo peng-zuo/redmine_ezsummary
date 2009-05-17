@@ -2,3 +2,7 @@
 
 ----------------------------------------
 <%= render :partial => "issue", :locals => { :issue => @issue, :issue_url => @issue_url } %>
+----------------------------------------
+
+<%= t(:label_history) %>
+<%= render :partial => "history", :locals => { :journals => @journals } %>

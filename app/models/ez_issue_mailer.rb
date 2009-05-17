@@ -1,16 +1,15 @@
 class EzIssueMailer < ActionMailer::Base
-  unloadable
   helper :custom_fields
   helper :application
   helper :journals
+  helper :ez_issue_summaries
   include Redmine::I18n
 
-  #self.view_paths.unshift(ActionController::Base.view_paths).uniq!
-  
+  self.template_root = ActionController::Base.view_paths.last
+
   include CustomFieldsHelper
   include ApplicationHelper
-  include JournalsHelper
-
+  include EzIssueSummariesHelper
 
   def self.default_url_options
     Mailer.default_url_options
