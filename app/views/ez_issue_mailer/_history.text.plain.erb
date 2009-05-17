@@ -1,0 +1,7 @@
+<% for journal in journals %>
+<%= authored journal.created_on, journal.user, :label => :label_updated_time_by, :plain => true %>
+<% for detail in journal.details %>
+<%= show_detail(detail) %>
+<% end %>
+<%= journal.notes if journal.notes? %>
+<% end %>
