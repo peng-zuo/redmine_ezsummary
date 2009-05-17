@@ -9,3 +9,6 @@ en:
     ez_recipients: Recipients
     ez_subject: Subject
     permission_ez_send_mail: Send Mail
+    ez_recipients_error: Recipients error
+    ez_subject_error: Subject error
+    ez_content_error: Body error
