@@ -9,6 +9,7 @@ module EzIssueSummariesHelper
   end
 
   def init_vars
+    @templates = User.current.ez_mail_templates
     @errors = {}
     @attributes = {}
   end

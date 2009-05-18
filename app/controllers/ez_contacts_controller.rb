@@ -6,9 +6,7 @@ class EzContactsController < ApplicationController
 .map {|c| c.email }
 
     respond_to do |format|
-      format.js {
-        render :json => @contacts.join("\n")
-      }
+      format.js { render :json => @contacts.join("\n") }
     end
   end
 end

@@ -6,15 +6,13 @@ class EzIssueSummariesController < ApplicationController
 
   layout "ez_base"
 
-  def new
-    @templates = User.current.ez_mail_templates
+  def new  
     respond_to do |format|
       format.html { }
     end
   end
 
   def create
-    @templates = User.current.ez_mail_templates
     [:content, :recipients, :subject].each do |var|
       @attributes[var] = params[var]
     end
@@ -23,33 +21,31 @@ class EzIssueSummariesController < ApplicationController
     @journals.each_with_index {|j, i| j.indice = i+1}
     @journals.reverse! if User.current.wants_comments_in_reverse_order?
 
-
-    @errors.merge! EzContact.import_contacts(*@attributes[:recipients].split(/,|\s/))
+    recipients = @attributes[:recipients].split(/,|\s/)
+    @errors.merge! EzContact.import_contacts(*recipients)
 
     [:content, :subject, :recipients].each do |key|
       @errors.merge! key => "ez_#{key}_error" if @attributes[key].blank?
     end
 
-    if (params[:save_flag] == "1")
-      User.current.ez_mail_templates.create(:content => @attributes[:content])
-    end
+    User.current.ez_mail_templates.create(:content => @attributes[:content]) if params[:save_flag] == "1"
+
     if @errors.empty?
       begin
-        EzIssueMailer.deliver_issue_summary(@attributes[:recipients].split(/,|\s/), @attributes[:subject], @attributes[:content], @issue, @journals)
+        EzIssueMailer.deliver_issue_summary(recipients, @attributes[:subject], @attributes[:content], @issue, @journals)
         flash[:notice] = t('ez_issue_mail_succ')
         respond_to do |format|
           format.html { redirect_to url_for(:controller => "issues", :action => "show", :id => @issue) }
-          format.js { render :template => "ez_issue_summaries/success", :layout => false }#{ render :json => {:success => "ok" } }
+          format.js { render :template => "ez_issue_summaries/success", :layout => false }
         end
         return
       rescue Exception => e
-        puts e.to_s
         @errors.merge! :unknown => "ez_unknown_error"
       end
     end
     respond_to do |format|
       format.html { render :action => "new" }
-      format.js { render :json => {:success => "error" } }
+      format.js { render :template => "ez_issue_summaries/fail", :layout => false }
     end
 
   end
