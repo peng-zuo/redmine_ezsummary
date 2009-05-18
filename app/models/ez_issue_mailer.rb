@@ -1,7 +1,6 @@
 class EzIssueMailer < ActionMailer::Base
   helper :custom_fields
   helper :application
-  helper :journals
   helper :ez_issue_summaries
   include Redmine::I18n
 
