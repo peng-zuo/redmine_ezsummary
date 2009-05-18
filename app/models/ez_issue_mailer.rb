@@ -17,7 +17,6 @@ class EzIssueMailer < ActionMailer::Base
 
   def issue_summary(recv, thesubject, content, issue, journals)
     recipients recv
-    from "peng.zuo@qq.com"
     subject thesubject
     sent_on Time.now
 
