@@ -1,3 +1,17 @@
-= issue_summary
+= ez_summary 0.0.1
 
-Description goes here
+This is a summary plugin for redmine, currently only support emailing issues.
+
+= INSTALL
+
+copy the files to RAILS_ROOT/vender/plugins
+rake db:migrate_plugins
+you are good to go
+
+= USAGE
+
+First you need to manage permissions to let users see it, only visible for admin by default.
+Then in the issue detail page, you should see an "Email" for authorized users.
+In the email page, you DONOT need to write anything about the issue, it is included by default.
+
+
