@@ -12,3 +12,4 @@ zh:
     ez_recipients_error: 发件人出错
     ez_subject_error: 邮件主题出错
     ez_content_error: 邮件内容出错
+    ez_unknown_error: 发送邮件发生错误

@@ -12,3 +12,4 @@ en:
     ez_recipients_error: Recipients error
     ez_subject_error: Subject error
     ez_content_error: Body error
+    ez_unknown_error: Errors occured during deliverring
