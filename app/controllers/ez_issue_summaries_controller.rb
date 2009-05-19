@@ -40,6 +40,7 @@ class EzIssueSummariesController < ApplicationController
         end
         return
       rescue Exception => e
+        logger.info e.to_s
         @errors.merge! :unknown => "ez_unknown_error"
       end
     end

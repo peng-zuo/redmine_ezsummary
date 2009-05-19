@@ -1,11 +1,13 @@
 class EzIssueMailer < ActionMailer::Base
   helper :custom_fields
   helper :application
+  helper :issues
   helper :ez_issue_summaries
   include Redmine::I18n
 
   self.template_root = ActionController::Base.view_paths.last
 
+  include IssuesHelper
   include CustomFieldsHelper
   include ApplicationHelper
   include EzIssueSummariesHelper
