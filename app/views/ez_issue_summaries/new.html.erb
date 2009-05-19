@@ -20,7 +20,8 @@
                     });
             $("#fill_in").click(
                     function() {
-                        $("#issue_content").append($("#templates option:selected").val());
+                        var textarea = $("#issue_content");
+                        textarea.val( textarea.val() + $("#templates option:selected").val());
                     }
                     );
 
