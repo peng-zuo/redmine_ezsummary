@@ -12,6 +12,7 @@ module EzIssueSummariesHelper
     @templates = User.current.ez_mail_templates
     @errors = {}
     @attributes = {}
+    @html_title = [t("text_ezsummary_mail")]
   end
 
   def authored(created, author, options={})

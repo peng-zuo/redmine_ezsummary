@@ -1,15 +1,19 @@
 zh:
-    ez_email: 邮件
-    ez_send_mail: 发送邮件
-    ez_send_and_save_mail: 发送并保存
-    ez_issue_mail_succ: 成功发送
-    ez_issue_mail_error: 发送失败
-    ez_email_template: 邮件模板
-    ez_fill_in: 插入
-    ez_recipients: 收件人
-    ez_subject: 主题
-    permission_ez_send_mail: 发送邮件
-    ez_recipients_error: 发件人出错
-    ez_subject_error: 邮件主题出错
-    ez_content_error: 邮件内容出错
-    ez_unknown_error: 发送邮件发生错误
+    text_ezsummary_mail: 汇总邮件
+    text_ezsummary_mail_succ: 已成功发送
+    text_ezsummary_mail_error: 发送中出现错误
+    text_ezsummary_email_template: 邮件模板
+    text_ezsummary_save_mail_tempate: 是否保存正文至邮件模板
+    text_mail_content_desc: 问题的汇总信息已自动包含在邮件正文中
+    text_mail_template_desc: 点击 "插入" 以插入选择的模板到邮件正文中
+    button_fill_in: 插入
+    button_send_mail: 发送汇总邮件
+    field_recipients: 收件人
+    field_mail_content: 邮件正文
+    permission_ezsummary_send_mail: 发送汇总邮件
+    error_ezsummary_recipients: 收件人发生错误
+    error_ezsummary_subject: 主题发生错误
+    error_ezsummary_content: 正文发生错误
+    error_ezsummary_unknown: 发送中出现未知错误
+    project_module_ez_summary: EzSummary
+    text_tooltip_save_mail_tempate: 下一次可以从你的邮件模板中直接选择

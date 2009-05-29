@@ -1,18 +1,27 @@
 <%= render_mail_error(@errors) %>
 <fieldset id="email">
-  <legend><%= t("ez_email") %></legend>
+  <legend><%= t("text_ezsummary_mail") %></legend>
   <% form_tag ez_mail_path(:issue_id => issue), :method => :post, :id => "create_email_form" do -%>
-      <div class="label_wrapper">
-        <%= label_tag 'recipients', "#{t('ez_recipients')}:" %>
-        <%= text_area_tag 'recipients', attributes[:recipients] %>
-
+      <div id="top_form">
+        <div class="label-wrapper">
+          <%= label_tag 'recipients', "#{t('field_recipients')}:" %>
+          <%= text_area_tag 'recipients', attributes[:recipients] %>
+        </div>
+        <div class="label-wrapper">
+          <%= label_tag 'subject', "#{t('field_subject')}:" %>
+          <%= text_field_tag 'subject', attributes[:subject] || "#{issue.tracker.name} ##{issue.id}: #{issue.subject}" %>
+        </div>
+        <div class="label-wrapper">
+          <%= label_tag 'mail_content', "#{t('field_content')}:" %>
+          <textarea name="content" id="mail_content"><%= attributes[:content] %></textarea>
+        </div>
+        <div class="left-indent notice"><p><%= t("text_mail_content_desc") %></p></div>
       </div>
-      <div class="label_wrapper">
-        <%= label_tag "#{t('ez_subject')}:" %>
-        <%= text_field_tag 'subject', attributes[:subject] || "#{issue.tracker.name} ##{issue.id}: #{issue.subject}" %>
+      <div id="bottom_form">
+        <div class="label-wrapper">
+        <%= check_box_tag 'save_flag' %><%= label_tag 'save_flag', t("text_ezsummary_save_mail_tempate"), :title => t("text_tooltip_save_mail_tempate") %>
+          </div>
+        <%= submit_tag t("button_send_mail"), :id => "ez_send_mail" %><br />
       </div>
-      <%= hidden_field_tag 'save_flag', 0 %>
-      <textarea name="content" id="issue_content" cols="40" rows="10"><%= attributes[:content] %></textarea><br/>
-      <%= submit_tag t("ez_send_mail") %> <%= submit_tag t("ez_send_and_save_mail"), :id => "send_and_save" %>
   <% end -%>
 </fieldset>

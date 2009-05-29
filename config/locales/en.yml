@@ -1,15 +1,19 @@
 en:
-    ez_email: Email
-    ez_send_mail: Send Mail
-    ez_send_and_save_mail: Send and Save
-    ez_issue_mail_succ: Successfully delivered
-    ez_issue_mail_error: Errors occured during deliverring
-    ez_email_template: Email templates
-    ez_fill_in: Fill in
-    ez_recipients: Recipients
-    ez_subject: Subject
-    permission_ez_send_mail: Send Mail
-    ez_recipients_error: Recipients error
-    ez_subject_error: Subject error
-    ez_content_error: Body error
-    ez_unknown_error: Errors occured during deliverring
+    text_ezsummary_mail: Summary Email
+    text_ezsummary_mail_succ: Successfully delivered
+    text_ezsummary_mail_error: Errors occured during deliverring
+    text_ezsummary_email_template: Mail templates
+    text_ezsummary_save_mail_tempate: Save Mail content to template?
+    text_mail_content_desc: The issue's summary information is already included in the mail.
+    text_mail_template_desc: Click "Fill in" to insert your selection to Mail body.
+    text_tooltip_save_mail_tempate: Next time you can select the text in the mail templates below.
+    button_fill_in: Fill in
+    button_send_mail: Send Summary Mail
+    field_recipients: Recipients
+    field_mail_content: Mail Content
+    permission_ezsummary_send_mail: Send Summary Mail
+    error_ezsummary_recipients: Recipients error
+    error_ezsummary_subject: Subject error
+    error_ezsummary_content: Content error
+    error_ezsummary_unknown: Errors occured during deliverring
+    project_module_ez_summary: EzSummary

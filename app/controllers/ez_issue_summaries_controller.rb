@@ -25,7 +25,7 @@ class EzIssueSummariesController < ApplicationController
     @errors.merge! EzContact.import_contacts(*recipients)
 
     [:content, :subject, :recipients].each do |key|
-      @errors.merge! key => "ez_#{key}_error" if @attributes[key].blank?
+      @errors.merge! key => "error_ezsummary_#{key}" if @attributes[key].blank?
     end
 
     User.current.ez_mail_templates.create(:content => @attributes[:content]) if params[:save_flag] == "1"
@@ -33,20 +33,17 @@ class EzIssueSummariesController < ApplicationController
     if @errors.empty?
       begin
         EzIssueMailer.deliver_issue_summary(recipients, @attributes[:subject], @attributes[:content], @issue, @journals)
-        flash[:notice] = t('ez_issue_mail_succ')
+        flash[:notice] = t('text_ezsummary_mail_succ')
         respond_to do |format|
           format.html { redirect_to url_for(:controller => "issues", :action => "show", :id => @issue) }
-          format.js { render :template => "ez_issue_summaries/success", :layout => false }
         end
         return
       rescue Exception => e
-        logger.info e.to_s
-        @errors.merge! :unknown => "ez_unknown_error"
+        @errors.merge! :unknown => "error_ezsummary_unknown"
       end
     end
     respond_to do |format|
       format.html { render :action => "new" }
-      format.js { render :template => "ez_issue_summaries/fail", :layout => false }
     end
 
   end

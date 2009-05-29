@@ -5,7 +5,7 @@ class EzIssueMailer < ActionMailer::Base
   helper :ez_issue_summaries
   include Redmine::I18n
 
-  self.template_root = ActionController::Base.view_paths.last
+  self.template_root = ActionController::Base.view_paths.first
 
   include IssuesHelper
   include CustomFieldsHelper
@@ -26,6 +26,7 @@ class EzIssueMailer < ActionMailer::Base
             :content => content,
             :issue_url => url_for(:controller => 'issues', :action => 'show', :id => issue),
             :journals => journals
+    
   end
 
   def render_message(method_name, body)

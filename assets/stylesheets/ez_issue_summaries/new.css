@@ -1,0 +1,91 @@
+
+fieldset{
+    margin-top: 10px;
+}
+
+input[type='submit'], input[type='button']{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.left-indent {
+	margin-left: 90px;
+}
+#top_form input {
+	padding: 0;
+	height: 2em;
+}
+
+.label-wrapper {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.notice {
+    color: red;
+}
+
+#top_form .label-wrapper label {
+	float: left;
+	width: 80px;
+    font-weight: bold;
+	text-align: right;
+}
+
+/*#top_form input, #top_form textarea{*/
+	/*margin-left:10px;*/
+	/*width: 80%;*/
+/*}*/
+#top_form input[type='text'], #top_form textarea {
+    margin-left:10px;
+	width: 80%;
+	/*border-style: ridge;*/
+    border: 1px solid gray;
+}
+
+textarea {
+    overflow-y:auto;    
+}
+textarea#mail_content{
+	height: 300px;
+}
+#bottom_form{
+	margin-top:10px;
+	margin-left: 90px;
+}
+div.autocomplete {
+  margin:0px;
+  padding:0px;
+  width:250px;
+  background:#fff;
+  border:1px solid #888;
+  position:absolute;
+}
+
+div.autocomplete ul {
+  margin:0px;
+  padding:0px;
+  list-style-type:none;
+}
+
+div.autocomplete ul li.selected {
+  background-color:#ffb;
+}
+
+div.autocomplete ul li {
+  margin:0;
+  padding:2px;
+  height:32px;
+  display:block;
+  list-style-type:none;
+  cursor:pointer;
+}
+
+
+#mail_templates{
+	margin-top: 10px;
+}
+#templates{
+	width: 20em;
+}
