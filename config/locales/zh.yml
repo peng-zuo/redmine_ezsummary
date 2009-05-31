@@ -1,5 +1,5 @@
 zh:
-    label_ezsummary_mail: 汇总邮件
+    label_ezsummary_mail: 问题汇总邮件
     text_ezsummary_mail_succ: 已成功发送
     text_ezsummary_mail_error: 发送中出现错误
     label_ezsummary_email_template: 邮件模板

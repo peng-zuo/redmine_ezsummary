@@ -1,5 +1,5 @@
 en:
-    label_ezsummary_mail: Summary Email
+    label_ezsummary_mail: Issue Summary Email
     text_ezsummary_mail_succ: Successfully delivered
     text_ezsummary_mail_error: Errors occured during deliverring
     label_ezsummary_email_template: Mail templates
