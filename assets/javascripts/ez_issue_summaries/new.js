@@ -1,6 +1,9 @@
 function fill_in() {
     var textarea = $("#mail_content");
-    textarea.val(textarea.val() + $("#templates option:selected").val());
+    var selected = $("#templates option:selected");
+    if(selected.val() != undefined){
+        textarea.val(textarea.val() + selected.val());
+    }
 }
 
 $(function() {
