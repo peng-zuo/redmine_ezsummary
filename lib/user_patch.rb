@@ -17,7 +17,7 @@ module PengZuo
                 contacts.each do |contact|
                   on_the_fly = find_or_create_by_email(contact)
                   if on_the_fly.errors.on(:email)
-                    errors.merge! :recipients => on_the_fly.errors.on(:email)
+                    errors.merge! :email => on_the_fly.errors.on(:email)
                   end
                 end
               end

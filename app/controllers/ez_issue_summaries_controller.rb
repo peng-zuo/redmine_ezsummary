@@ -4,9 +4,10 @@ class EzIssueSummariesController < ApplicationController
   include EzIssueSummariesHelper
   before_filter :find_issue, :init_vars, :authorize
 
-  layout "ez_base"
+  menu_item :issues
 
-  def new  
+  def new
+    @project = @issue.project
     respond_to do |format|
       format.html { }
     end
@@ -25,7 +26,7 @@ class EzIssueSummariesController < ApplicationController
     @errors.merge! User.current.ez_contacts.import_contacts(*recipients)
 
     [:subject, :recipients].each do |key|
-      @errors.merge! key => "error_ezsummary_#{key}" if @attributes[key].blank?
+      @errors.merge! key => t("error_ezsummary_#{key}") if @attributes[key].blank?
     end
 
     User.current.ez_mail_templates.create(:content => @attributes[:content]) if params[:save_flag] == "1"
@@ -40,7 +41,7 @@ class EzIssueSummariesController < ApplicationController
         return
       rescue Exception => e
         logger.info e.to_s
-        @errors.merge! :unknown => "error_ezsummary_unknown"
+        @errors.merge! :unknown => t("error_ezsummary_unknown")
       end
     end
     respond_to do |format|

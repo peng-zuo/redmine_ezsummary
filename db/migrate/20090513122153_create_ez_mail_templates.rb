@@ -1,9 +1,9 @@
 class CreateEzMailTemplates < ActiveRecord::Migration
   def self.up
     create_table :ez_mail_templates do |t|
-			t.text :content
-			t.integer :user_id
-			t.timestamps
+      t.text :content
+      t.integer :user_id
+      t.timestamps
     end
   end
 

@@ -12,7 +12,7 @@ module EzIssueSummariesHelper
     @templates = User.current.ez_mail_templates
     @errors = {}
     @attributes = {}
-    @html_title = [t("text_ezsummary_mail")]
+    @html_title = [t("label_ezsummary_mail")]
   end
 
   def authored(created, author, options={})
@@ -25,7 +25,7 @@ module EzIssueSummariesHelper
   def render_mail_error(errors)
     return "" if errors.blank?
     error_messages = errors.map do |key, value|
-      content_tag(:li, t(value))
+      content_tag(:li, value)
     end.join()
     contents = ""
     contents << content_tag(:ul, error_messages)

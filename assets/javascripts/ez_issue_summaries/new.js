@@ -1,14 +1,13 @@
-function fill_in() {
-    var textarea = $("#mail_content");
-    var selected = $("#templates option:selected");
-    if(selected.val() != undefined){
-        textarea.val(textarea.val() + selected.val());
-    }
-}
-
-$(function() {
-    $("#recipients").autocomplete("/ez_contacts", {
+var $j = jQuery.noConflict();
+jQuery(document).ready(function() {
+    $j("#recipients").autocomplete("/ez_contacts", {
         multiple: true
     });
-    $("#fill_in").click(fill_in);
+    $j("#fill_in").click(function() {
+        var textarea = $j("#mail_content");
+        var selected = $j("#templates option:selected");
+        if (selected.val()) {
+            textarea.val(textarea.val() + selected.val());
+        }
+    });
 });

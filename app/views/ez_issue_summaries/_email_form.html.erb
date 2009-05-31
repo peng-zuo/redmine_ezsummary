@@ -1,15 +1,15 @@
 <%= render_mail_error(@errors) %>
 <fieldset id="email">
-  <legend><%= t("text_ezsummary_mail") %></legend>
+  <legend><%= t("label_ezsummary_mail") %></legend>
   <% form_tag ezsummary_path(:issue_id => issue), :method => :post, :id => "create_email_form" do -%>
       <div id="top_form">
         <div class="label-wrapper">
           <%= label_tag 'recipients', "#{t('field_recipients')}:" %>
-          <%= text_area_tag 'recipients', attributes[:recipients] %>
+          <%= text_area_tag 'recipients', attributes[:recipients], :required => true %>
         </div>
         <div class="label-wrapper">
           <%= label_tag 'subject', "#{t('field_subject')}:" %>
-          <%= text_field_tag 'subject', attributes[:subject] || "#{issue.tracker.name} ##{issue.id}: #{issue.subject}" %>
+          <%= text_field_tag 'subject', attributes[:subject] || "#{issue.project.name} - #{issue.tracker.name} ##{issue.id}: #{issue.subject}", :required => true %>
         </div>
         <div class="label-wrapper">
           <%= label_tag 'mail_content', "#{t('field_content')}:" %>
@@ -19,9 +19,10 @@
       </div>
       <div id="bottom_form">
         <div class="label-wrapper">
-        <%= check_box_tag 'save_flag' %><%= label_tag 'save_flag', t("text_ezsummary_save_mail_tempate"), :title => t("text_tooltip_save_mail_tempate") %>
-          </div>
-        <%= submit_tag t("button_send_mail"), :id => "ez_send_mail" %><br />
+          <%= check_box_tag 'save_flag' %><%= label_tag 'save_flag', t("text_ezsummary_save_mail_tempate"), :title => t("text_tooltip_save_mail_tempate") %>
+        </div>
+        <%= submit_tag t("button_send_mail"), :id => "ez_send_mail" %>
+        <br/>
       </div>
   <% end -%>
 </fieldset>

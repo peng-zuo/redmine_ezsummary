@@ -6,12 +6,11 @@ class EzIssueMailer < Mailer #ActionMailer::Base
   include EzIssueSummariesHelper
 
 
-
   def issue_summary(recv, thesubject, content, issue, journals)
     redmine_headers 'Project' => issue.project.identifier,
                     'Issue-Id' => issue.id,
                     'Issue-Author' => issue.author.login
-    
+
     recipients recv
     subject thesubject
     body    :issue => issue,
@@ -26,7 +25,7 @@ class EzIssueMailer < Mailer #ActionMailer::Base
 
     part "text/html" do |p|
       p.body = render_message("issue_summary.text.html.rhtml", body)
-    end            
+    end
   end
 
 #  def render_message(method_name, body)

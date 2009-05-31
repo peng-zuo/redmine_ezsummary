@@ -1,12 +1,12 @@
 <% content_for :header_tags do -%>
     <%= stylesheet_link_tag 'ez_issue_summaries/new.css', 'jquery.autocomplete.css', :plugin => 'ezSummary' %>
     <%= javascript_include_tag "jquery",
-            "jquery.autocomplete.js",
-            "jquery.bgiframe.min.js",
-            "ez_issue_summaries/new.js",
-            :plugin => "ezSummary" %>
+                               "jquery.autocomplete.js",
+                               "jquery.bgiframe.min.js",
+                               "ez_issue_summaries/new.js",
+                               :plugin => "ezSummary" %>
 <% end -%>
-
+<h2><%= l(:label_ezsummary_mail) %></h2>
 <%= render :partial => "email_form", :locals => { :issue => @issue, :attributes => @attributes, :errors => @errors } %>
 
 <%= render :partial => "templates", :object => @templates %>
