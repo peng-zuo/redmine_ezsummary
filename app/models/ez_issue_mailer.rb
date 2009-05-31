@@ -11,7 +11,7 @@ class EzIssueMailer < Mailer #ActionMailer::Base
                     'Issue-Id' => issue.id,
                     'Issue-Author' => issue.author.login
 
-    recipients recv
+    recipients recv.uniq
     subject thesubject
     body    :issue => issue,
             :content => content,
