@@ -24,7 +24,7 @@ class EzIssueSummariesController < ApplicationController
     recipients = @attributes[:recipients].split(/,|\s/)
     @errors.merge! User.current.ez_contacts.import_contacts(*recipients)
 
-    [:content, :subject, :recipients].each do |key|
+    [:subject, :recipients].each do |key|
       @errors.merge! key => "error_ezsummary_#{key}" if @attributes[key].blank?
     end
 
