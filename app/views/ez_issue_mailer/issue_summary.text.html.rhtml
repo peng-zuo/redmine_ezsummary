@@ -1,0 +1,10 @@
+<p><%= @content %></p>
+<hr/>
+<%= render :partial => "issue_text_html", :locals => { :issue => @issue, :issue_url => @issue_url } %>
+<% if @journals.any? %>
+    <hr/>
+    <div id="history">
+      <h3><%= t(:label_history) %></h3>
+      <%= render :partial => "history_text_html", :locals => { :journals => @journals } %>
+    </div>
+<% end %>

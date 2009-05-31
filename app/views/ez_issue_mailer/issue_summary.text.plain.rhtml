@@ -1,0 +1,8 @@
+<%= @content %>
+
+----------------------------------------
+<%= render :partial => "issue_text_plain", :locals => { :issue => @issue, :issue_url => @issue_url } %>
+----------------------------------------
+
+<%= t(:label_history) %>
+<%= render :partial => "history_text_plain", :locals => { :journals => @journals } %>

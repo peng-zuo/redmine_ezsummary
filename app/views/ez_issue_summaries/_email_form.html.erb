@@ -1,7 +1,7 @@
 <%= render_mail_error(@errors) %>
 <fieldset id="email">
   <legend><%= t("text_ezsummary_mail") %></legend>
-  <% form_tag ez_mail_path(:issue_id => issue), :method => :post, :id => "create_email_form" do -%>
+  <% form_tag ezsummary_path(:issue_id => issue), :method => :post, :id => "create_email_form" do -%>
       <div id="top_form">
         <div class="label-wrapper">
           <%= label_tag 'recipients', "#{t('field_recipients')}:" %>
