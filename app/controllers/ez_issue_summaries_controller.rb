@@ -22,7 +22,7 @@ class EzIssueSummariesController < ApplicationController
     @journals.reverse! if User.current.wants_comments_in_reverse_order?
 
     recipients = @attributes[:recipients].split(/,|\s/)
-    @errors.merge! EzContact.import_contacts(*recipients)
+    @errors.merge! User.current.ez_contacts.import_contacts(*recipients)
 
     [:content, :subject, :recipients].each do |key|
       @errors.merge! key => "error_ezsummary_#{key}" if @attributes[key].blank?
@@ -39,6 +39,7 @@ class EzIssueSummariesController < ApplicationController
         end
         return
       rescue Exception => e
+        logger.info e.to_s
         @errors.merge! :unknown => "error_ezsummary_unknown"
       end
     end
