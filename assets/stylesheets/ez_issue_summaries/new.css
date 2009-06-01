@@ -3,7 +3,6 @@ fieldset {
 }
 
 input[type='submit'], input[type='button'] {
-    display: block;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -33,10 +32,6 @@ input[type='submit'], input[type='button'] {
     text-align: right;
 }
 
-/*#top_form input, #top_form textarea{*/
-/*margin-left:10px;*/
-/*width: 80%;*/
-/*}*/
 #top_form input[type='text'], #top_form textarea {
     margin-left: 10px;
     width: 80%; /*border-style: ridge;*/
@@ -89,5 +84,5 @@ div.autocomplete ul li {
 }
 
 #templates {
-    width: 20em;
+    width: 80%;
 }

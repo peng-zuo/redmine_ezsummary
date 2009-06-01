@@ -15,14 +15,12 @@
           <%= label_tag 'mail_content', "#{t('field_content')}:" %>
           <textarea name="content" id="mail_content"><%= attributes[:content] %></textarea>
         </div>
-        <div class="left-indent notice"><p><%= t("text_mail_content_desc") %></p></div>
+
       </div>
       <div id="bottom_form">
-        <div class="label-wrapper">
-          <%= check_box_tag 'save_flag' %><%= label_tag 'save_flag', t("text_ezsummary_save_mail_tempate"), :title => t("text_tooltip_save_mail_tempate") %>
-        </div>
         <%= submit_tag t("button_send_mail"), :id => "ez_send_mail" %>
-        <br/>
+        <%= check_box_tag 'save_flag' %><%= label_tag 'save_flag', t("text_ezsummary_save_mail_tempate"), :title => t("text_tooltip_save_mail_tempate") %>
+        <span class="notice"><%= t("text_mail_content_desc") %></span>
       </div>
   <% end -%>
 </fieldset>
