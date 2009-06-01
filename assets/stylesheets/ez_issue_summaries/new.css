@@ -8,7 +8,7 @@ input[type='submit'], input[type='button'] {
 }
 
 .left-indent {
-    margin-left: 90px;
+    margin-left: 110px;
 }
 
 #top_form input {
@@ -27,7 +27,7 @@ input[type='submit'], input[type='button'] {
 
 #top_form .label-wrapper label {
     float: left;
-    width: 80px;
+    width: 100px;
     font-weight: bold;
     text-align: right;
 }
@@ -51,7 +51,7 @@ textarea#mail_content {
 
 #bottom_form {
     margin-top: 10px;
-    margin-left: 90px;
+    margin-left: 110px;
 }
 
 #mail_templates {

@@ -4,15 +4,15 @@
   <% form_tag ezsummary_path(:issue_id => issue), :html => { :method => :post, :id => "create_email_form"} do -%>
       <div id="top_form">
         <div class="label-wrapper">
-          <%= label_tag 'recipients', "#{t('field_recipients')}:" %>
-          <%= text_area_tag 'recipients', attributes[:recipients], :required => true %>
+          <%= label_tag 'recipients', "#{t('field_recipients')}: ", :class => 'required' %>
+          <%= text_area_tag 'recipients', attributes[:recipients] %>
         </div>
         <div class="label-wrapper">
-          <%= label_tag 'subject', "#{t('field_subject')}:" %>
-          <%= text_field_tag 'subject', attributes[:subject] || "#{issue.project.name} - #{issue.tracker.name} ##{issue.id}: #{issue.subject}", :required => true %>
+          <%= label_tag 'subject', "#{t('field_subject')}: ", :class => 'required' %>
+          <%= text_field_tag 'subject', attributes[:subject] || "#{issue.project.name} - #{issue.tracker.name} ##{issue.id}: #{issue.subject}" %>
         </div>
         <div class="label-wrapper">
-          <%= label_tag 'mail_content', "#{t('field_content')}:" %>
+          <%= label_tag 'mail_content', "#{t('field_content')}: " %>
           <textarea name="content" id="mail_content"><%= attributes[:content] %></textarea>
         </div>
 
