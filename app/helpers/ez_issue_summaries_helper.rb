@@ -17,7 +17,7 @@ module EzIssueSummariesHelper
 
   def authored(created, author, options={})
     tag = distance_of_time_in_words(Time.now, created)
-    time_tag = options[:plain] ? tag : content_tag('acronym', tag, :title => format_time(created))
+    time_tag = tag << " (#{format_time(created)}) "
     author_tag =  h(author || 'Anonymous')
     l(options[:label] || :label_added_time_by, :author => author_tag, :age => time_tag)
   end

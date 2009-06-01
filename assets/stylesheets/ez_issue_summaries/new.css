@@ -1,10 +1,10 @@
 fieldset {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 input[type='submit'], input[type='button'] {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .left-indent {
@@ -17,8 +17,8 @@ input[type='submit'], input[type='button'] {
 }
 
 .label-wrapper {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .notice {
@@ -34,21 +34,32 @@ input[type='submit'], input[type='button'] {
 
 #top_form input[type='text'], #top_form textarea {
     margin-left: 10px;
-    width: 80%; /*border-style: ridge;*/
+    width: 1000px; /*border-style: ridge;*/
     border: 1px solid gray;
 }
 
 textarea {
     overflow-y: auto;
 }
+textarea#recipients {
+    height: 30px;
+}
 
 textarea#mail_content {
-    height: 300px;
+    height: 100px;
 }
 
 #bottom_form {
     margin-top: 10px;
     margin-left: 90px;
+}
+
+#mail_templates {
+    margin-top: 10px;
+}
+
+#templates {
+    width: 1000px;
 }
 
 div.autocomplete {
@@ -79,10 +90,3 @@ div.autocomplete ul li {
     cursor: pointer;
 }
 
-#mail_templates {
-    margin-top: 10px;
-}
-
-#templates {
-    width: 80%;
-}
