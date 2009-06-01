@@ -1,8 +1,8 @@
 <% for journal in journals %>
     <div>
-      <h4>
+      <h3>
         <%= authored journal.created_on, journal.user, :label => :label_updated_time_by %>
-      </h4>
+      </h3>
       <ul>
         <% for detail in journal.details %>
             <li><%= show_detail(detail) %></li>

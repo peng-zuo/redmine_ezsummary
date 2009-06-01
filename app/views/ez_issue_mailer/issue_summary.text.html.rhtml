@@ -4,7 +4,7 @@
 <% if @journals.any? %>
     <hr/>
     <div id="history">
-      <h3><%= t(:label_history) %></h3>
+      <h2><%= t(:label_history) %></h2>
       <%= render :partial => "history_text_html", :locals => { :journals => @journals } %>
     </div>
 <% end %>
