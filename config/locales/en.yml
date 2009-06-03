@@ -1,21 +1,27 @@
 en:
     label_ezsummary_mail: Issue Summary Email
-    text_ezsummary_mail_succ: Successfully delivered
-    text_ezsummary_mail_error: Errors occured during deliverring
     label_ezsummary_email_template: Mail templates
+
+    text_ezsummary_mail_succ: Successfully delivered an issue summary mail
+    text_ezsummary_mail_error: Errors occured during deliverring
     text_ezsummary_save_mail_tempate: Save Mail content to template?
     text_mail_content_desc: The issue's summary information is already included in the mail.
     text_mail_template_desc: Click "Fill in" to insert your selection to Mail body.
     text_tooltip_save_mail_tempate: Next time you can select the text in the mail templates below.
+
     button_fill_in: Fill in
-    button_send_mail: Send Summary Mail
+    button_send_mail: Send Issue Summary Mail
+
     field_recipients: Recipients
     field_mail_content: Mail Content
-    permission_ezsummary_send_mail: Send Issue Summary Mail
+
     error_ezsummary_recipients: Recipients cannot be blank
     error_ezsummary_subject: Subject cannot be blank
     error_ezsummary_unknown: Errors occured during deliverring
-    project_module_ez_summary: EzSummary
+
+    project_module_ez_summary: Issue Summary Mail
+    permission_ezsummary_send_mail: Send Issue Summary Mail
+
     activerecord:
         errors:
             models:

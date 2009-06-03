@@ -9,6 +9,7 @@ Redmine::Plugin.register :redmine_ezsummary do
   author 'Peng Zuo'
   description 'Send Summary Emails'
   version '0.0.1'
+  url 'http://ezwork.techcon.thtf.com.cn'
 
   project_module :ez_summary do
     permission :ezsummary_send_mail, :ez_issue_summaries =>  [:new, :create]

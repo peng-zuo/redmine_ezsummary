@@ -1,4 +1,4 @@
-= ez_summary 0.0.1
+= ezSummary 0.0.1
 
 This is a summary plugin for redmine, currently only support emailing issues.
 

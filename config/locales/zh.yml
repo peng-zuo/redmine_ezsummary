@@ -1,21 +1,27 @@
 zh:
     label_ezsummary_mail: 问题汇总邮件
-    text_ezsummary_mail_succ: 已成功发送
-    text_ezsummary_mail_error: 发送中出现错误
     label_ezsummary_email_template: 邮件模板
+
+    text_ezsummary_mail_succ: 已成功发送问题汇总邮件
+    text_ezsummary_mail_error: 发送中出现错误
     text_ezsummary_save_mail_tempate: 是否保存正文至邮件模板
     text_mail_content_desc: 问题的汇总信息已自动包含在邮件正文中
     text_mail_template_desc: 点击 "插入" 以插入选择的模板到邮件正文中
+    text_tooltip_save_mail_tempate: 下一次可以从你的邮件模板中直接选择
+
     button_fill_in: 插入
     button_send_mail: 发送汇总邮件
+
     field_recipients: 收件人
     field_mail_content: 邮件正文
-    permission_ezsummary_send_mail: 发送问题汇总邮件
+
     error_ezsummary_recipients: 收件人不能为空
     error_ezsummary_subject: 主题不能为空
     error_ezsummary_unknown: 发送中出现未知错误
-    project_module_ez_summary: EzSummary
-    text_tooltip_save_mail_tempate: 下一次可以从你的邮件模板中直接选择
+
+    project_module_ez_summary: 问题汇总邮件
+    permission_ezsummary_send_mail: 发送问题汇总邮件
+
     activerecord:
         errors:
             models:
