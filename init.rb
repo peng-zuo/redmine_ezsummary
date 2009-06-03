@@ -4,7 +4,7 @@ require_dependency 'issue_summary_listener'
 require_dependency 'user'
 require 'user_patch'
 
-Redmine::Plugin.register :ezSummary do
+Redmine::Plugin.register :redmine_ezsummary do
   name 'Redmine ezSummary plugin'
   author 'Peng Zuo'
   description 'Send Summary Emails'
